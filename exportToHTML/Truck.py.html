@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>Truck.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #808080;}
+.s3 { color: #6a8759;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Truck.py</font>
+</center></td></tr></table>
+<pre><span class="s0">class </span><span class="s1">Truck:</span>
+    <span class="s2"># Initializes truck with specified attributes.</span>
+    <span class="s2"># Big O Time Complexity: O(1), as the __init__ method performs a fixed number of assignments.</span>
+    <span class="s2"># Big O Space Complexity: O(n), due to the variable number of packages stored in the list,</span>
+    <span class="s2"># influencing the truck's memory usage.</span>
+    <span class="s0">def </span><span class="s1">__init__(self</span><span class="s0">, </span><span class="s1">capacity</span><span class="s0">, </span><span class="s1">speed</span><span class="s0">, </span><span class="s1">miles</span><span class="s0">, </span><span class="s1">current_location</span><span class="s0">, </span><span class="s1">depart_time</span><span class="s0">, </span><span class="s1">packages):</span>
+        <span class="s1">self.capacity = capacity</span>
+        <span class="s1">self.speed = speed</span>
+        <span class="s1">self.miles = miles  </span><span class="s2"># Distance the truck has traveled</span>
+        <span class="s1">self.current_location = current_location</span>
+        <span class="s1">self.depart_time = depart_time  </span><span class="s2"># The time the truck departs from the hub.</span>
+        <span class="s1">self.time = depart_time  </span><span class="s2"># The current time for the truck, initially set to its departure time.</span>
+        <span class="s1">self.packages = packages  </span><span class="s2"># Packages assigned to the truck</span>
+
+    <span class="s2"># Returns a string representation of the truck object and Compiles information about its current status.</span>
+    <span class="s2"># Big O Time Complexity: iterates through packages to build a string.</span>
+    <span class="s2"># linearly proportional to the number of packages</span>
+    <span class="s2"># Big O Space Complexity: as the method constructs a string that grows in size with the number of packages.</span>
+    <span class="s2"># Space used increases linearly with the number of packages included in the output string.</span>
+    <span class="s0">def </span><span class="s1">__str__(self):</span>
+        <span class="s1">package_list = </span><span class="s3">', '</span><span class="s1">.join(str(pkg) </span><span class="s0">for </span><span class="s1">pkg </span><span class="s0">in </span><span class="s1">self.packages)</span>
+        <span class="s0">return </span><span class="s1">(</span><span class="s3">f&quot;Speed: </span><span class="s0">{</span><span class="s1">self.speed</span><span class="s0">} </span><span class="s3">mph, Miles Traveled: </span><span class="s0">{</span><span class="s1">self.miles</span><span class="s0">}</span><span class="s3">, &quot;</span>
+                <span class="s3">f&quot;Current Location: </span><span class="s0">{</span><span class="s1">self.current_location</span><span class="s0">}</span><span class="s3">, Departure Time: </span><span class="s0">{</span><span class="s1">self.depart_time</span><span class="s0">}</span><span class="s3">,&quot;</span>
+                <span class="s3">f&quot;Packages: [</span><span class="s0">{</span><span class="s1">package_list</span><span class="s0">}</span><span class="s3">]&quot;</span><span class="s1">)</span>
+</pre>
+</body>
+</html>

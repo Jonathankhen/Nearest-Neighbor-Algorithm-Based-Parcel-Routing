@@ -1,0 +1,77 @@
+<html>
+<head>
+<title>HashMap.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #808080;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #cc7832;}
+.s3 { color: #6897bb;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+HashMap.py</font>
+</center></td></tr></table>
+<pre><span class="s0"># Adapted from concepts introduced in C950, Webinar 1 (W-1_ChainingHashTable_zyBooks_Key-Value.py)</span>
+
+<span class="s2">class </span><span class="s1">HashMap:</span>
+    <span class="s0"># Initializes a list to serve as the internal storage of the hash map.</span>
+    <span class="s0"># Big O Time Complexity: O(n) The constructor iterates over the range of the capacity to append an empty list</span>
+    <span class="s0"># to the hashMap for each slot, directly proportional to the capacity value.</span>
+    <span class="s0"># Big O Space Complexity: O(n) The initial size of the hashMap list is directly proportional to the capacity,</span>
+    <span class="s0"># with each slot initialized as an empty list.</span>
+    <span class="s2">def </span><span class="s1">__init__(self</span><span class="s2">, </span><span class="s1">capacity=</span><span class="s3">10</span><span class="s1">):</span>
+        <span class="s1">self.hashMap = []</span>
+        <span class="s2">for </span><span class="s1">i </span><span class="s2">in </span><span class="s1">range(capacity):  </span><span class="s0"># Populates the hashMap with empty lists for chaining.</span>
+            <span class="s1">self.hashMap.append([])</span>
+
+    <span class="s0"># Inserts a new package record or updates an existing one based on the package ID.</span>
+    <span class="s0"># Big O Time Complexity: O(n) in the worst case, where n is the number of records in a single chain.</span>
+    <span class="s0"># This occurs when multiple package IDs hash to the same index, requiring iteration through the chain.</span>
+    <span class="s0"># Big O Space Complexity: O(1) for inserting or updating a record, as the space required does not</span>
+    <span class="s0"># scale with the number of records (excluding the internal list growth).</span>
+    <span class="s2">def </span><span class="s1">add(self</span><span class="s2">, </span><span class="s1">packageid</span><span class="s2">, </span><span class="s1">details):</span>
+        <span class="s0"># Calculate the index for the packageID</span>
+        <span class="s1">index = hash(packageid) % len(self.hashMap)</span>
+        <span class="s1">chain = self.hashMap[index]</span>
+
+        <span class="s0"># Check if packageID already exists and update details</span>
+        <span class="s2">for </span><span class="s1">record </span><span class="s2">in </span><span class="s1">chain:</span>
+            <span class="s2">if </span><span class="s1">record[</span><span class="s3">0</span><span class="s1">] == packageid:</span>
+                <span class="s1">record[</span><span class="s3">1</span><span class="s1">] = details  </span><span class="s0"># Update details if found.</span>
+                <span class="s2">return True</span>
+
+        <span class="s0"># If packageID is new, append its details to the chain</span>
+        <span class="s1">chain.append([packageid</span><span class="s2">, </span><span class="s1">details])</span>
+        <span class="s2">return True</span>
+
+    <span class="s0"># Get the delivery details for a given packageID</span>
+    <span class="s0"># Big O Time Complexity: O(n), due to potentially iterating through all records in a chain.</span>
+    <span class="s0"># Big O Space Complexity: O(1), as retrieving a record does not require additional space.</span>
+    <span class="s2">def </span><span class="s1">get(self</span><span class="s2">, </span><span class="s1">packageid):</span>
+        <span class="s1">index = hash(packageid) % len(self.hashMap)</span>
+        <span class="s1">chain = self.hashMap[index]</span>
+
+        <span class="s0"># Search for packageID in the chain</span>
+        <span class="s2">for </span><span class="s1">record </span><span class="s2">in </span><span class="s1">chain:</span>
+            <span class="s2">if </span><span class="s1">record[</span><span class="s3">0</span><span class="s1">] == packageid:</span>
+                <span class="s2">return </span><span class="s1">record[</span><span class="s3">1</span><span class="s1">]  </span><span class="s0"># Return details if found.</span>
+        <span class="s2">return None  </span><span class="s0"># Return None if packageID not found</span>
+
+    <span class="s0"># Removes a package record identified by the package ID</span>
+    <span class="s0"># Big O Time Complexity: O(n), as it may need to iterate through the chain to find the package ID.</span>
+    <span class="s0"># Big O Space Complexity: O(1), since deletion does not scale with the number of records.</span>
+    <span class="s2">def </span><span class="s1">delete(self</span><span class="s2">, </span><span class="s1">packageid):</span>
+        <span class="s1">index = hash(packageid) % len(self.hashMap)</span>
+        <span class="s1">chain = self.hashMap[index]</span>
+
+        <span class="s0"># Iterate through the chain to find and remove the record.</span>
+        <span class="s2">for </span><span class="s1">record </span><span class="s2">in </span><span class="s1">chain:</span>
+            <span class="s2">if </span><span class="s1">record[</span><span class="s3">0</span><span class="s1">] == packageid:</span>
+                <span class="s1">chain.remove([record[</span><span class="s3">0</span><span class="s1">]</span><span class="s2">, </span><span class="s1">record[</span><span class="s3">1</span><span class="s1">]])</span>
+</pre>
+</body>
+</html>

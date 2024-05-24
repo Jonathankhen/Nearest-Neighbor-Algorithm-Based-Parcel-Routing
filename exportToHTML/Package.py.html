@@ -1,0 +1,67 @@
+<html>
+<head>
+<title>Package.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #808080;}
+.s3 { color: #6a8759;}
+.s4 { color: #6897bb;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Package.py</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">datetime</span>
+
+
+<span class="s0">class </span><span class="s1">Package:</span>
+    <span class="s2"># Initializes a package object with all necessary details.</span>
+    <span class="s2"># Big O Time Complexity: O(1), due to direct attribute assignments that are independent of input size.</span>
+    <span class="s2"># Big O Space Complexity: O(1) The space required does not depend on the size of the input but is fixed per instance</span>
+    <span class="s0">def </span><span class="s1">__init__(self</span><span class="s0">, </span><span class="s1">package_id</span><span class="s0">, </span><span class="s1">delivery_address</span><span class="s0">, </span><span class="s1">delivery_city</span><span class="s0">, </span><span class="s1">delivery_state</span><span class="s0">, </span><span class="s1">delivery_zip_code</span><span class="s0">,</span>
+                 <span class="s1">delivery_deadline</span><span class="s0">, </span><span class="s1">package_weight</span><span class="s0">, </span><span class="s1">delivery_status):</span>
+        <span class="s1">self.package_id = package_id</span>
+        <span class="s1">self.delivery_address = delivery_address</span>
+        <span class="s1">self.delivery_city = delivery_city</span>
+        <span class="s1">self.delivery_state = delivery_state</span>
+        <span class="s1">self.delivery_zip_code = delivery_zip_code</span>
+        <span class="s1">self.delivery_deadline = delivery_deadline</span>
+        <span class="s1">self.package_weight = package_weight</span>
+        <span class="s1">self.delivery_status = delivery_status</span>
+        <span class="s1">self.departure_time = </span><span class="s0">None  </span><span class="s2"># Initialized as None; to be updated when the package leaves the hub.</span>
+        <span class="s1">self.delivery_time = </span><span class="s0">None  </span><span class="s2"># Initialized as None; to be set upon delivery.</span>
+
+    <span class="s2"># Provides a string representation of the package, detailing its attributes.</span>
+    <span class="s2"># Big O Time Complexity: O(1), directly returns a formatted string.</span>
+    <span class="s2"># Big O Space Complexity: O(1), generates a string of constant size relative to the package's attributes.</span>
+    <span class="s0">def </span><span class="s1">__str__(self):</span>
+        <span class="s0">return </span><span class="s3">f&quot;Package ID: </span><span class="s0">{</span><span class="s1">self.package_id</span><span class="s0">}</span><span class="s3">, Address: </span><span class="s0">{</span><span class="s1">self.delivery_address</span><span class="s0">}</span><span class="s3">, City: </span><span class="s0">{</span><span class="s1">self.delivery_city</span><span class="s0">}</span><span class="s3">, &quot; </span><span class="s1">\</span>
+               <span class="s3">f&quot;State: </span><span class="s0">{</span><span class="s1">self.delivery_state</span><span class="s0">}</span><span class="s3">, Zip: </span><span class="s0">{</span><span class="s1">self.delivery_zip_code</span><span class="s0">}</span><span class="s3">, Deadline: </span><span class="s0">{</span><span class="s1">self.delivery_deadline</span><span class="s0">}</span><span class="s3">, &quot; </span><span class="s1">\</span>
+               <span class="s3">f&quot;Weight: </span><span class="s0">{</span><span class="s1">self.package_weight</span><span class="s0">}</span><span class="s3">KILO, Status: </span><span class="s0">{</span><span class="s1">self.delivery_status</span><span class="s0">}</span><span class="s3">, Delivery Time: </span><span class="s0">{</span><span class="s1">self.delivery_time</span><span class="s0">}</span><span class="s3">&quot;</span>
+
+    <span class="s2"># Update the status of the package based on the current time</span>
+    <span class="s2"># Big O Time Complexity: O(1), as it performs a fixed number of conditional checks and potential updates</span>
+    <span class="s2"># Big O Space Complexity: O(1), since the method's space requirement does not scale with any input size.</span>
+    <span class="s0">def </span><span class="s1">update_status(self</span><span class="s0">, </span><span class="s1">current_time):</span>
+        <span class="s0">if </span><span class="s1">self.delivery_time &lt; current_time:</span>
+            <span class="s1">self.delivery_status = </span><span class="s3">&quot;Delivered&quot;</span>
+        <span class="s0">elif </span><span class="s1">self.departure_time &gt; current_time:</span>
+            <span class="s1">self.delivery_status = </span><span class="s3">&quot;At Hub&quot;</span>
+        <span class="s0">elif </span><span class="s1">self.departure_time &lt; current_time &lt; self.delivery_time:</span>
+            <span class="s1">self.delivery_status = </span><span class="s3">&quot;In Route&quot;</span>
+
+    <span class="s2"># Special handling for package 9 to update its address after a specific time</span>
+        <span class="s0">if </span><span class="s1">self.package_id == </span><span class="s4">9</span><span class="s1">:</span>
+            <span class="s1">update_time = datetime.timedelta(hours=</span><span class="s4">10</span><span class="s0">, </span><span class="s1">minutes=</span><span class="s4">20</span><span class="s1">)</span>
+            <span class="s0">if </span><span class="s1">current_time &gt; update_time:</span>
+                <span class="s1">self.delivery_address = </span><span class="s3">&quot;410 S State St, Salt Lake City, UT 84111&quot;</span>
+            <span class="s0">else</span><span class="s1">:</span>
+                <span class="s1">self.delivery_address = </span><span class="s3">&quot;300 State St, Salt Lake City, UT 84103&quot;</span>
+</pre>
+</body>
+</html>
