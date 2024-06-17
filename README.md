@@ -63,18 +63,17 @@ Implemented package loading, delivery simulation (using nearest neighbor algorit
 ### Screenshots
 
 1. **Status of all packages loaded onto each truck between 8:35 a.m. and 9:25 a.m.**
-<img src="(https://github.com/Jonathankhen/Nearest-Neighbor-Algorithm-Based-Parcel-Routing/assets/121633526/93132967-7bf4-49d5-b65a-eb55681882bc" width="100" height="100">
-<img src="https://github.com/Jonathankhen/Nearest-Neighbor-Algorithm-Based-Parcel-Routing/assets/121633526/211128da-5a60-47f2-8540-bbc3ae847e2c" width="100" height="100">
+![image](https://github.com/Jonathankhen/Nearest-Neighbor-Algorithm-Based-Parcel-Routing/assets/121633526/7b63cb06-bbf9-40c4-9d6a-6558629c21f2)
+![image](https://github.com/Jonathankhen/Nearest-Neighbor-Algorithm-Based-Parcel-Routing/assets/121633526/92ea7f15-dafb-43a4-b667-1efae5582097)
 
 2. **Status of all packages loaded onto each truck between 9:35 a.m. and 10:25 a.m.**
-<img src="https://github.com/Jonathankhen/Nearest-Neighbor-Algorithm-Based-Parcel-Routing/assets/121633526/3cf9c81a-5e17-4dea-b8d8-fc9e950aa5f3" width="100" height="100">
-<img src="https://github.com/Jonathankhen/Nearest-Neighbor-Algorithm-Based-Parcel-Routing/assets/121633526/99d7bcc8-ed95-4e1d-a286-a4b07fa3eb18" width="100" height="100">
+![image](https://github.com/Jonathankhen/Nearest-Neighbor-Algorithm-Based-Parcel-Routing/assets/121633526/691f761e-e5b6-4941-823b-0c38dcf38365)
+![image](https://github.com/Jonathankhen/Nearest-Neighbor-Algorithm-Based-Parcel-Routing/assets/121633526/ca7ac6df-0022-4331-9e6d-5bb746dd2e5f)
 
 3. **Status of all packages loaded onto each truck between 12:03 p.m. and 1:12 p.m.**
-<img src="https://github.com/Jonathankhen/Nearest-Neighbor-Algorithm-Based-Parcel-Routing/assets/121633526/999c09da-2ae6-4bae-bf90-9fa03b21a64c" width="100" height="100">
-<img src="https://github.com/Jonathankhen/Nearest-Neighbor-Algorithm-Based-Parcel-Routing/assets/121633526/90d94f62-fab9-4eac-b97a-b27365db74c2" width="100" height="100">
+![image](https://github.com/Jonathankhen/Nearest-Neighbor-Algorithm-Based-Parcel-Routing/assets/121633526/1658932e-e9e4-44fc-8b87-82693f126c03)
+![image](https://github.com/Jonathankhen/Nearest-Neighbor-Algorithm-Based-Parcel-Routing/assets/121633526/f71a82a6-959c-433f-b92b-0f9155da4e7e)
 
 4. **Total mileage traveled by all trucks**
-<img src="https://github.com/Jonathankhen/Nearest-Neighbor-Algorithm-Based-Parcel-Routing/assets/121633526/2ed1c2f3-2e3d-4f02-88ac-899bddba2771" width="100" height="100">
-
+![image](https://github.com/Jonathankhen/Nearest-Neighbor-Algorithm-Based-Parcel-Routing/assets/121633526/cabd86f9-7977-443f-abdd-e88d7d3f3d8a)
 
