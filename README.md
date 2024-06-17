@@ -60,6 +60,34 @@ Attributes and methods to manage truck details and delivery process.
 - **File**: `main.py`
 Implemented package loading, delivery simulation (using nearest neighbor algorithm), and user interface for tracking.
 
+###How to Use the Interface
+
+####Launch the Program:
+- Clone the repository and navigate to the project directory.
+- Run the main.py file to start the program. This will initialize the package delivery system.
+
+####Starting the Process:
+- You will see a prompt: To begin the process, please enter 'start'. Any other entry will terminate the program.
+- Type start and press Enter to proceed.
+
+#### Entering Time for Package Status:
+- You will be prompted to enter the time in the format HH:MM to view the package status at a specific time of the day.
+- Input the desired time and press Enter.
+
+#### Choosing Package Status View:
+- You will be asked to choose between viewing the status of a single package or all packages.
+- Enter single to check the status of a single package or all to review the status of all packages.
+
+#### Single Package Status:
+- If you chose single, you will be prompted to enter the numeric ID of the package.
+- Enter the package ID and press Enter to view its status.
+
+#### All Packages Status:
+- If you chose all, the program will display the status of all packages at the given time.
+
+#### Exit the Program:
+- The program will exit automatically if an unrecognized input is entered at any prompt.
+
 ### Screenshots
 
 1. **Status of all packages loaded onto each truck between 8:35 a.m. and 9:25 a.m.**
