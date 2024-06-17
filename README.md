@@ -75,6 +75,6 @@ Implemented package loading, delivery simulation (using nearest neighbor algorit
 ![image](https://github.com/Jonathankhen/Nearest-Neighbor-Algorithm-Based-Parcel-Routing/assets/121633526/90d94f62-fab9-4eac-b97a-b27365db74c2)
 
 4. **Total mileage traveled by all trucks**
-- ![image](https://github.com/Jonathankhen/Nearest-Neighbor-Algorithm-Based-Parcel-Routing/assets/121633526/2ed1c2f3-2e3d-4f02-88ac-899bddba2771)
+![image](https://github.com/Jonathankhen/Nearest-Neighbor-Algorithm-Based-Parcel-Routing/assets/121633526/2ed1c2f3-2e3d-4f02-88ac-899bddba2771)
 
 
