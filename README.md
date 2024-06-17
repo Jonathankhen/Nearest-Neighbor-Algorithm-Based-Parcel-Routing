@@ -60,7 +60,7 @@ Attributes and methods to manage truck details and delivery process.
 - **File**: `main.py`
 Implemented package loading, delivery simulation (using nearest neighbor algorithm), and user interface for tracking.
 
-### How to Use the Interface
+## How to Use the Interface
 
 #### Launch the Program:
 - Clone the repository and navigate to the project directory.
