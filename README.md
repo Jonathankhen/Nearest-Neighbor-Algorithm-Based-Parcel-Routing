@@ -63,14 +63,14 @@ Implemented package loading, delivery simulation (using nearest neighbor algorit
 ### Screenshots
 
 1. **Status of all packages loaded onto each truck between 8:35 a.m. and 9:25 a.m.**
-   - ![image](https://github.com/Jonathankhen/Nearest-Neighbor-Algorithm-Based-Parcel-Routing/assets/121633526/58f38325-bf34-479d-98e2-9a875aac11c0)
+![image](https://github.com/Jonathankhen/Nearest-Neighbor-Algorithm-Based-Parcel-Routing/assets/121633526/58f38325-bf34-479d-98e2-9a875aac11c0)
 
 2. **Status of all packages loaded onto each truck between 9:35 a.m. and 10:25 a.m.**
-   - ![image](https://github.com/Jonathankhen/Nearest-Neighbor-Algorithm-Based-Parcel-Routing/assets/121633526/1833c331-a464-4a27-8765-805c6aa6dbf5)
+![image](https://github.com/Jonathankhen/Nearest-Neighbor-Algorithm-Based-Parcel-Routing/assets/121633526/1833c331-a464-4a27-8765-805c6aa6dbf5)
 
 3. **Status of all packages loaded onto each truck between 12:03 p.m. and 1:12 p.m.**
-   - ![image](https://github.com/Jonathankhen/Nearest-Neighbor-Algorithm-Based-Parcel-Routing/assets/121633526/f4c2a434-69a1-4abb-89ad-366b802ba2bc)
+![image](https://github.com/Jonathankhen/Nearest-Neighbor-Algorithm-Based-Parcel-Routing/assets/121633526/f4c2a434-69a1-4abb-89ad-366b802ba2bc)
 
 4. **Total mileage traveled by all trucks**
-   - ![image](https://github.com/Jonathankhen/Nearest-Neighbor-Algorithm-Based-Parcel-Routing/assets/121633526/9ba1946e-b0fc-4927-bd8a-201bf84d788b)
+![image](https://github.com/Jonathankhen/Nearest-Neighbor-Algorithm-Based-Parcel-Routing/assets/121633526/9ba1946e-b0fc-4927-bd8a-201bf84d788b)
 
